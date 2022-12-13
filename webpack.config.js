@@ -10,6 +10,9 @@ module.exports = {
     filename: "[name].bundle.js", //crea el archivo .js
     path: path.resolve(__dirname, "./build"), //crea la carpeta build
   },
+  devServer: {
+    open: true
+  },
 
   module: {
     rules: [
@@ -27,6 +30,11 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      { 
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },     
+      
     ],
   },
 

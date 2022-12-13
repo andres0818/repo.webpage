@@ -13,3 +13,11 @@ export const createP=(text=" ")=>{
     document.body.appendChild(element)
 
 }
+
+
+export const createImage=(src)=>{
+
+    const img = document.createElement("img");
+    img.src = src;
+    document.body.appendChild(img)
+}
